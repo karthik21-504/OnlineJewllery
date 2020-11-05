@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<body class="bg-image">
+<div class="container">
+<form onsubmit="return validateform()">
+    <h2 style="color:#C71585">RK JEWELLERS</h2>
+<label class="username"><font face="Comic Sans MS" color="SlateBlue"><b>Username</b></font></label><br>
+<input type="text" id="username" name="username"><br>
+<label class="password"><font face="Comic Sans MS" color="SlateBlue"><b>Password</b></font></label><br>
+<input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="password" name="password"><br>
+<div id="lower">
+<input type="checkbox"><label for="checkbox"><font face="Comic Sans MS" color="SlateBlue">Keep me logged in</label><br>
+<button>Login</button>
+</div>
+</form>
+</div>
+</body>
+<head>
+
+   <script>
+             function validateform(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if (username.length<6)
+{
+  if(username.length==0)
+  {
+    alert("the name can't be blank");
+  }
+  else
+  {
+    alert("minimum 6 characters required");
+  }
+return false;
+}
+
+else if(password.length<6)
+{
+  alert("Password must be atleast 6 characters");
+}
+else{
+    window.open("C:/Users/cse/Documents/jewel.html");
+}
+}
+   </script>
+
+    <style>
+      .bg-image {
+        background-image: url("https://renewedvision.com/wp-content/uploads/2020/05/Slide-Graphic-4.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+      }
+       .container {
+      position: relative;
+      margin-top:50px;
+      margin-right:0px;
+      margin-left:400px;
+      }
+    button {
+  background-color:#C71585;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 90px;
+  opacity: 0.9;
+}
+   button:hover{
+    opacity:1;
+   }
+
+ input[type=text],input[type=password]
+      {
+           width:300px;
+           padding:12px 20px;
+           display:inline-block;
+           border:1px green;
+           border-radius:0px;
+           background-color: rgba(255,255,255,0.5);
+        box-sizing:border-box;
+
+      }
+
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+
+
+
+    </style>
+</head>
+</html>
